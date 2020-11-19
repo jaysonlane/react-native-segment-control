@@ -116,7 +116,7 @@ class SegmentControl extends Component {
   handleOnScroll = x => {
     const mover = Animated.event([
       { nativeEvent: { contentOffset: { x: this.state.scrollX } } }
-    ]);
+    ], {useNativeDriver: true});
     mover(x);
   };
 }
